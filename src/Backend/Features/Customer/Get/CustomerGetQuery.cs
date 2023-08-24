@@ -44,14 +44,7 @@ internal class CustomerListQueryHandler : IRequestHandler<CustomerListQuery, Lis
             return result;
         }
     }
-    /// <summary>
-    /// Restituisce una stringa in formato xml contenente l'elenco dei customer.
-    /// La funzione è puramente dimostrativa, può risultare ridindande in quanto può essere sfruttata solo la precedente e poi gestire nella pagina web la serializzazione ed 
-    /// il download con javascript oppure utilizzando il componente di blazor.
-    /// </summary>
-    /// <param name="Nome"></param>
-    /// <param name="Email"></param>
-    /// <returns>Lista di oggetti customer inclusi codice e descrizione categoria</returns>
+    
      internal class CustomerListXmlExtractQueryHandler : IRequestHandler<CustomerListXmlQuery, string>
     {
         private readonly BackendContext context;
@@ -60,8 +53,15 @@ internal class CustomerListQueryHandler : IRequestHandler<CustomerListQuery, Lis
         {
             this.context = context;
         }
-        //La funzione può risultare ridindande in quanto può essere sfruttata solo la precedente e poi gestire nella pagina web la serializzazione ed 
-        //il download con javascript oppure utilizzando il componente di blazor
+
+        /// <summary>
+        /// Restituisce una stringa in formato xml contenente l'elenco dei customer.
+        /// La funzione è puramente dimostrativa, può risultare ridindande in quanto può essere sfruttata solo la precedente e poi gestire nella pagina web la serializzazione ed 
+        /// il download con javascript oppure utilizzando il componente di blazor.
+        /// </summary>
+        /// <param name="Nome"></param>
+        /// <param name="Email"></param>
+        /// <returns>Una stringa in formato xml contenente la lista di oggetti customer inclusi codice e descrizione categoria</returns>
         public async Task<string> Handle(CustomerListXmlQuery request, CancellationToken cancellationToken)
         {
             var query = context.Customers.AsQueryable();
