@@ -1,4 +1,4 @@
-namespace Backend.Features.Suppliers;
+namespace Backend.Features.Get.Suppliers;
 
 internal class SupplierListQueryHandler : IRequestHandler<SupplierListQuery, List<SupplierListQueryResponse>>
 {

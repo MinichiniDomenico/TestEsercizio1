@@ -1,5 +1,5 @@
-using Backend.Features.Employees;
-using Backend.Features.Suppliers;
+using Backend.Features.Get.Employees;
+using Backend.Features.Get.Suppliers;
 
 namespace Backend;
 
