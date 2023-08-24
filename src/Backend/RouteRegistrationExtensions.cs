@@ -12,5 +12,6 @@ static class RouteRegistrationExtensions
         apiGroup.MapGet("suppliers/list", async ([AsParameters]SupplierListQuery query, IMediator mediator) => await mediator.Send(query)).WithName("GetSuppliersList").WithOpenApi();
         apiGroup.MapGet("employees/list", async ([AsParameters]EmployeesListQuery query, IMediator mediator) => await mediator.Send(query)).WithName("GetEmployeesList").WithOpenApi();
         apiGroup.MapGet("customer/get/list", async ([AsParameters] CustomerListQuery query, IMediator mediator) => await mediator.Send(query)).WithName("GetCustomersList").WithOpenApi();
+        apiGroup.MapGet("customer/get/xmlList", async ([AsParameters] CustomerListXmlQuery query, IMediator mediator) => await mediator.Send(query)).WithName("GetCustomerListXmlExtract").WithOpenApi();
     }
 }

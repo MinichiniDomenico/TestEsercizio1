@@ -1,5 +1,5 @@
 #region Customer
-    public class CustomerListXmlExtractQuery : IRequest<string>
+    public class CustomerListXmlQuery : IRequest<string>
     {
         public string? Nome { get; set; }
         public string? Email { get; set; }
