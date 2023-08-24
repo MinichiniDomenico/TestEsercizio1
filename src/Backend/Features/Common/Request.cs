@@ -10,3 +10,11 @@
         public string? Email { get; set; }
     }
     #endregion
+     #region Employ
+
+    public class EmployeesListQuery : IRequest<List<EmployeesListQueryResponse>>
+    {
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
+    }
+    #endregion 
