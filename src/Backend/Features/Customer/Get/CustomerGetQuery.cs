@@ -44,6 +44,14 @@ internal class CustomerListQueryHandler : IRequestHandler<CustomerListQuery, Lis
             return result;
         }
     }
+    /// <summary>
+    /// Restituisce una stringa in formato xml contenente l'elenco dei customer.
+    /// La funzione è puramente dimostrativa, può risultare ridindande in quanto può essere sfruttata solo la precedente e poi gestire nella pagina web la serializzazione ed 
+    /// il download con javascript oppure utilizzando il componente di blazor.
+    /// </summary>
+    /// <param name="Nome"></param>
+    /// <param name="Email"></param>
+    /// <returns>Lista di oggetti customer inclusi codice e descrizione categoria</returns>
      internal class CustomerListXmlExtractQueryHandler : IRequestHandler<CustomerListXmlQuery, string>
     {
         private readonly BackendContext context;
